@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class AgentMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void MoveAgent(Vector2 movementInput)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log(movementInput);
     }
 }
