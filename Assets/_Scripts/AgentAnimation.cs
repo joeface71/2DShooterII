@@ -20,4 +20,6 @@ public class AgentAnimation : MonoBehaviour
     {
         SetWalkAnimation(velocity > 0);
     }
+
+    
 }

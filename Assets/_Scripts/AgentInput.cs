@@ -6,11 +6,31 @@ using UnityEngine.Events;
 
 public class AgentInput : MonoBehaviour
 {
-   [field: SerializeField]
-   public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
+    private Camera mainCamera;
 
-    private void Update() {
+    [field: SerializeField]
+    public UnityEvent<Vector2> OnMovementKeyPressed { get; set; }
+
+    [field: SerializeField]
+    public UnityEvent<Vector2> OnPointerPositionChange { get; set; }
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }
+
+    private void Update()
+    {
         GetMovementInput();
+        GetPointerInput();
+    }
+
+    private void GetPointerInput()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = mainCamera.nearClipPlane;
+        var mouseInWorldSpace = mainCamera.ScreenToWorldPoint(mousePos);
+        OnPointerPositionChange?.Invoke(mouseInWorldSpace);
     }
 
     private void GetMovementInput()
