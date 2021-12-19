@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PistolWeaponData
   m_EditorClassIdentifier: 
   <BulletData>k__BackingField: {fileID: 11400000, guid: 0841d1f31194a784cbb159397e69b160, type: 2}
-  <AmmoCapacity>k__BackingField: 20
+  <AmmoCapacity>k__BackingField: 10
   <AutomaticFire>k__BackingField: 0
   <WeaponDelay>k__BackingField: 0.5
   <SpreadAngle>k__BackingField: 1

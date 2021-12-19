@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class AITransition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [field: SerializeField]
+    public List<AIDecision> Decisions { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [field: SerializeField]
+    public AIState PositiveResult { get; set; }
+
+    [field: SerializeField]
+    public AIState NegativeResult { get; set; }
+
+    private void Awake() {
+        Decisions.Clear();
+        Decisions = new List<AIDecision>(GetComponents<AIDecision>());
     }
 }

@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIDecision : MonoBehaviour
+public abstract class AIDecision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected AIActionData aIActionData;
+    protected AIMovementData aIMovementData;
+    protected EnemyAIBrain enemyBrain;
+
+    private void Awake()
     {
-        
+        aIActionData = transform.root.GetComponentInChildren<AIActionData>();
+        aIMovementData = transform.root.GetComponentInChildren<AIMovementData>();
+        enemyBrain = transform.root.GetComponent<EnemyAIBrain>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract bool MakeADecision();
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 509183797033525878}
   - component: {fileID: 509183797033525881}
-  - component: {fileID: 509183797033525880}
   - component: {fileID: 509183797033525883}
   - component: {fileID: 509183797033525882}
   - component: {fileID: 6698393959427581968}
@@ -73,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1186965273
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6051064961186182539, guid: 4f4e95b34d9c7f842a2a810504f24617, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d72893c5deca474eb1f931effe87efd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,25 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &509183797033525880
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509183797033525885}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9c98668ab958ea409023f059324e05b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &509183797033525883
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -118,9 +98,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6285452, y: -0.00000041765517}
-  m_Size: {x: 0.91520965, y: 0.44124314}
-  m_Direction: 1
+  m_Offset: {x: 0.0025540586, y: 0.001593977}
+  m_Size: {x: 0.2977566, y: 0.5337127}
+  m_Direction: 0
 --- !u!50 &509183797033525882
 Rigidbody2D:
   serializedVersion: 4
@@ -154,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e526f6e6732bded43af4b4c4d989aa5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BulletData>k__BackingField: {fileID: 0}
+  <BulletData>k__BackingField: {fileID: 11400000, guid: 0841d1f31194a784cbb159397e69b160, type: 2}
