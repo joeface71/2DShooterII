@@ -45,17 +45,14 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
             OnGetHit?.Invoke();
             if (Health <= 0)
             {
-                StartCoroutine(WaitToDie());
                 dead = true;
                 OnDie?.Invoke();
             }
-
         }
     }
 
-    IEnumerator WaitToDie()
+    public void Die()
     {
-        yield return new WaitForSeconds(.55f);
         Destroy(gameObject);
     }
 

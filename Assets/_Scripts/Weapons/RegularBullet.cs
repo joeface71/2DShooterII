@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RegularBullet : Bullet
 {
     protected Rigidbody2D rigidbody2d;
+    private bool isDead = false;
 
     public override BulletDataSO BulletData
     {
@@ -28,29 +30,39 @@ public class RegularBullet : Bullet
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if (isDead)
+        {
+            return;
+        }
+        isDead = true;
         var hittable = other.GetComponent<IHittable>();
         hittable?.GetHit(BulletData.Damage, gameObject);
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
-            HitObstacle();
+            HitObstacle(other);
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            HitEnemy();
+            HitEnemy(other);
         }
 
         Destroy(gameObject);
     }
 
-    private void HitEnemy()
+    private void HitEnemy(Collider2D other)
     {
-        Debug.Log("Hitting Enemy");
+        Vector2 randomOffset = Random.insideUnitCircle * 0.5f;
+        Instantiate(BulletData.ImpactEnemyPrefab, other.transform.position + (Vector3)randomOffset, Quaternion.identity);
     }
 
-    private void HitObstacle()
+    private void HitObstacle(Collider2D other)
     {
-        Debug.Log("hitting obstacle");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
+        if (hit.collider != null) // cant check if a struct is null
+        {
+            Instantiate(BulletData.ImpactObstaclePrefab, hit.point, Quaternion.identity);
+        }
     }
 
 }
