@@ -24,17 +24,9 @@ public class Player : MonoBehaviour, IAgent, IHittable
             OnGetHit?.Invoke();
             if (Health <= 0)
             {
-                StartCoroutine(DeathCoroutine());
                 OnDie?.Invoke();
                 dead = true;
             }
         }
-
-    }
-
-    IEnumerator DeathCoroutine()
-    {
-        yield return new WaitForSeconds(1.35f);
-        Destroy(gameObject);
     }
 }

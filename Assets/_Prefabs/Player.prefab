@@ -362,6 +362,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7640522151781878388}
+        m_TargetAssemblyTypeName: AgentAnimation, Assembly-CSharp
+        m_MethodName: PlayDeathAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7640522150333056925}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7640522151322685016}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7640522150333056924}
+        m_TargetAssemblyTypeName: AgentMovement, Assembly-CSharp
+        m_MethodName: StopImmediatelty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7640522150380621200
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   pitchRandomness: 0.05
-  hitClip: {fileID: 8300000, guid: 1ba623dc16f392649a252ddd49723c28, type: 3}
+  hitClip: {fileID: 8300000, guid: 1dbf8e987ed751c4a9a83ad238735684, type: 3}
   deathClip: {fileID: 8300000, guid: e60a55e03501c8e479ce77a3a7f477d1, type: 3}
   voiceLineClip: {fileID: 0}
 --- !u!1 &7640522151322685016
@@ -873,7 +921,7 @@ MonoBehaviour:
   - {x: -0.48943555, y: 0.285147, z: 0}
   m_ShapePathHash: -1845329
   m_Mesh: {fileID: 0}
-  m_InstanceId: 18400
+  m_InstanceId: -1552
 --- !u!1001 &7640522150803529741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -931,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7076124610782145215, guid: 063e7534528804946af12423cc31f881, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 063e7534528804946af12423cc31f881, type: 3}
@@ -953,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 979199404847459557, guid: d04f368d1d75ea049ae4ddb4431dfb5f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 979199404847459561, guid: d04f368d1d75ea049ae4ddb4431dfb5f, type: 3}
       propertyPath: m_RootOrder
