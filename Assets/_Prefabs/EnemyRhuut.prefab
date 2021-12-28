@@ -76,7 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feedbackToPlay:
   - {fileID: 910539797574292727}
-  - {fileID: 1773762107}
 --- !u!114 &1773762107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,8 +89,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeTimeDelay: 0.01
-  unFreezeTimeDelay: 4
-  timeFreezeValue: 0.1
+  unFreezeTimeDelay: 2
+  timeFreezeValue: 0.5
 --- !u!1 &910539798441873231
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5171a97d1f6d6a84a9a46857879849d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Distance>k__BackingField: 9
+  <Distance>k__BackingField: 10
 --- !u!1 &1709279625094984796
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72dd5b1eeae81a54bb17a7c883d71464, type: 3}
   m_Name: AssaultRifleWeaponData
   m_EditorClassIdentifier: 
-  <BulletData>k__BackingField: {fileID: 11400000, guid: 0841d1f31194a784cbb159397e69b160, type: 2}
+  <BulletData>k__BackingField: {fileID: 11400000, guid: de8b90e1f75cb504ba4e8744cc73a9dc, type: 2}
   <AmmoCapacity>k__BackingField: 75
   <AutomaticFire>k__BackingField: 1
   <WeaponDelay>k__BackingField: 0.1

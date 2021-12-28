@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 
 
-public class Enemy : MonoBehaviour, IHittable, IAgent
+public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
 {
     [field: SerializeField]
     public EnemyDataSO EnemyData { get; set; }
@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
     public EnemyAttack EnemyAttack { get; set; }
 
     private bool dead = false;
+
+    private AgentMovement agentMovement;
 
     [field: SerializeField]
     public UnityEvent OnGetHit { get; set; }
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
         {
             EnemyAttack = GetComponent<EnemyAttack>();
         }
+        agentMovement = GetComponent<AgentMovement>();
     }
 
     private void Start()
@@ -64,4 +67,8 @@ public class Enemy : MonoBehaviour, IHittable, IAgent
         }
     }
 
+    public void KnockBack(Vector2 direction, float power, float duration)
+    {
+        agentMovement.KnockBack(direction, power, duration);
+    }
 }

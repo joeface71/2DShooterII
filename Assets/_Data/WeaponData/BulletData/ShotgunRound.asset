@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4983d10c2ec4f46b9f5791368f033e, type: 3}
+  m_Name: ShotgunRound
+  m_EditorClassIdentifier: 
+  <BulletPrefab>k__BackingField: {fileID: 3472864310996354171, guid: d9f6626f3c69c9147ba46dd4d3dfebe6, type: 3}
+  <BulletSpeed>k__BackingField: 25
+  <Damage>k__BackingField: 1
+  <Friction>k__BackingField: 0
+  <Bounce>k__BackingField: 0
+  <GoThroughHittable>k__BackingField: 0
+  <IsRaycast>k__BackingField: 0
+  <ImpactObstaclePrefab>k__BackingField: {fileID: 8624822738161709584, guid: 88b2750abe8634b4eaad922f11db3ab7, type: 3}
+  <ImpactEnemyPrefab>k__BackingField: {fileID: 1544438055948491704, guid: 8d4307f80e3197f4ca1e34b87c9228dc, type: 3}
+  <KnockBackPower>k__BackingField: 3
+  <KnockBackDelay>k__BackingField: 0.1

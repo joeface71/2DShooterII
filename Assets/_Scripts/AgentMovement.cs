@@ -15,6 +15,8 @@ public class AgentMovement : MonoBehaviour
     [SerializeField]
     protected float currentVelocity = 3f;
 
+    protected bool isKnockedBack = false;
+
     protected Vector2 movementDirection;
 
 
@@ -51,12 +53,44 @@ public class AgentMovement : MonoBehaviour
     private void FixedUpdate()
     {
         OnVelocityChange?.Invoke(currentVelocity);
-        rigidbody2d.velocity = currentVelocity * movementDirection;
+        if (isKnockedBack == false)
+        {
+            rigidbody2d.velocity = currentVelocity * movementDirection;
+        }
     }
 
     public void StopImmediatelty()
     {
         currentVelocity = 0;
         rigidbody2d.velocity = Vector2.zero;
+    }
+
+    public void KnockBack(Vector2 direction, float power, float duration)
+    {
+        if (isKnockedBack == false)
+        {
+            isKnockedBack = true;
+            StartCoroutine(KnockBackCoroutine(direction, power, duration));
+        }
+    }
+
+    public void ResetKnockBack()
+    {
+        StopCoroutine("KnockBackCoroutine");
+        ResetKnockBackParameters();
+    }
+
+    IEnumerator KnockBackCoroutine(Vector2 direction, float power, float duration)
+    {
+        rigidbody2d.AddForce(direction.normalized * power, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(duration);
+        ResetKnockBackParameters();
+    }
+
+    private void ResetKnockBackParameters()
+    {
+        currentVelocity = 0;
+        rigidbody2d.velocity = Vector2.zero;
+        isKnockedBack = false;
     }
 }
